@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <h1 class="titulo">Bem-vindo ao Painel Pessoal</h1>
+
+    <div id="motivacao" class="frase">
+        <blockquote>
+            <p class="frase"></p>
+            <cite class="autor"></cite>
+            <button class="btn-novo">Me Motive!</button>
+        </blockquote>
+    </div>
+    <!-- ------ -->
+    <div id="hora" class="hora">
+        <div class="container">
+            <div class="glass-card relogio-principal">
+                <div class="hora-display">
+                    <div id="hora-atual" class="hora">00:00:00</div>
+                </div>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-label">Data</div>
+                        <div id="data" class="info-value">Carregando...</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">Fuso Horário</div>
+                        <div id="fuso" class="info-value">...</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">Dia do Ano</div>
+                        <div id="dia-ano" class="info-value">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------ -->
+
+    <div id="tempo" class="tempo">Tempo</div>
+
+
+
+
+    <div id="lista" class="lista">
+         <div class="container">
+        <div class="header">
+            <h1>Lista de Tarefas</h1>
+            <p>Organize suas atividades e seja mais produtivo!</p>
+        </div>
+
+        <div class="input-container">
+            <input type="text" class="task-input" placeholder="Digite uma nova tarefa..." id="taskInput">
+            <button class="add-btn" id="addBtn" onclick="">Adicionar</button>
+        </div>
+
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">Todas</button>
+            <button class="filter-btn" data-filter="pending">Pendentes</button>
+            <button class="filter-btn" data-filter="completed">Concluídas</button>
+        </div>
+
+        <div class="tasks-container" id="tasksContainer">
+            <div class="empty-state" id="emptyState">
+                <h3>Nenhuma tarefa ainda</h3>
+                <p>Adicione sua primeira tarefa para começar!</p>
+            </div>
+        </div>
+
+        <div class="stats" id="stats" style="display: none;">
+            <div class="stat-item">
+                <div class="stat-number" id="totalTasks">0</div>
+                <div class="stat-label">Total</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="pendingTasks">0</div>
+                <div class="stat-label">Pendentes</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="completedTasks">0</div>
+                <div class="stat-label">Concluídas</div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="mapa" class="mapa">Mapa</div>
+
+<div id="notas" class="notas">Bloco de Notas>
+  <div class="container">
+    <header class="header">
+      <h1>Bloco de Notas</h1>
+      <p>Digite e salve suas anotações rapidamente no navegador.</p>
+    </header>
+
+    <section class="notas-container" aria-label="Bloco de Notas Rápido">
+      <textarea id="notas" placeholder="Digite suas anotações aqui..."></textarea>
+      <div class="info-sub">As anotações são salvas automaticamente no seu navegador.</div>
+    </section>
+
+    <div class="stats" id="stats" style="display: none;">
+      <div class="stat-item">
+        <div class="stat-number" id="charCount">0</div>
+        <div class="stat-label">Caracteres</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" id="wordCount">0</div>
+        <div class="stat-label">Palavras</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="desenho" class="desenho">
+  <div class="container">
+    <div class="glass-card">
+      <h2>Quadro de Desenho</h2>
+      <div class="controls">
+        <button id="toggle-eraser">Usar Borracha</button>
+      </div>
+      <canvas id="canvas" width="700" height="400"></canvas>
+    </div>
+  </div>
+</div>
+    
+
+
+
+    <div id="musica" class="musica">
+
+        <div class="wrapper">
+            <div class="top-bar">
+                <i class="material-icons">expand_more</i>
+                <span>Now Playing</span>
+                <i class="material-icons">more_horiz</i>
+            </div>
+            <div class="img-area">
+                <img src="" alt="">
+            </div>
+            <div class="song-details">
+                <p class="name"></p>
+                <p class="artist"></p>
+            </div>
+            <div class="progress-area">
+                <div class="progress-bar">
+                    <audio id="main-audio" src=""></audio>
+                </div>
+                <div class="song-timer">
+                    <span class="current-time">0:00</span>
+                    <span class="max-duration">0:00</span>
+                </div>
+            </div>
+            <div class="controls">
+                <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+                <i id="prev" class="material-icons">skip_previous</i>
+                <div class="play-pause">
+                    <i class="material-icons play">play_arrow</i>
+                </div>
+                <i id="next" class="material-icons">skip_next</i>
+                <i id="more-music" class="material-icons">queue_music</i>
+            </div>
+            <div class="music-list">
+                <div class="header">
+                    <div class="row">
+                        <i class="list material-icons">queue_music</i>
+                        <span>Music list</span>
+                    </div>
+                    <i id="close" class="material-icons">close</i>
+                </div>
+                <ul>
+                    <!-- here li list are coming from js -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="livros" class="livros">Livros</div>
+
+    <div id="filmes" class="filmes">Filmes</div>
+
+
+    <script src="js/Desenho.js"></script>
+    <script src="js/Musica.js"></script>
+    <script src="js/Livros.js"></script>
+    <script src="js/Filmes.js"></script>
+    <script src="js/Hora.js"></script>
+    <script src="js/Lista.js"></script>
+    <script src="js/Mapa.js"></script>
+    <script src="js/Notas.js"></script>
+    <script src="js/Motivacao.js"></script>
+    <script src="js/Tempo.js"></script>
+
+    <script src="js/music-list.js"></script>
+
+   
+
+
+</body>
+
+</html>
