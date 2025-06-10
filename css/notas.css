@@ -1,0 +1,113 @@
+:root {
+  --bg: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  --container-bg: rgba(255, 255, 255, 0.7);
+  --texto: #1565c0;
+  --texto-secondary: #d32f2f;
+  --sub: #666;
+  --sombra: rgba(21, 101, 192, 0.3);
+  --border: rgba(0, 0, 0, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --backdrop-blur: blur(10px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.notas {
+  font-family: "Orbitron", sans-serif;
+  background: var(--bg);
+  color: var(--texto);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--backdrop-blur);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px var(--sombra);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--texto), var(--texto-secondary));
+  opacity: 0.7;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: var(--texto);
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+textarea {
+  flex: 1;
+  resize: none;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 15px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1rem;
+  color: var(--texto);
+  background: var(--container-bg);
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: var(--texto-secondary);
+  box-shadow: 0 0 8px var(--texto-secondary);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.info-sub {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--sub);
+  text-align: center;
+  user-select: none;
+}
+
+@media (max-width: 480px) {
+  .glass-card {
+    height: 300px;
+    padding: 20px;
+  }
+}
+
+.notas-container {
+  min-height: 320px; /* um pouco maior que o textarea */
+  display: flex;
+  flex-direction: column;
+}

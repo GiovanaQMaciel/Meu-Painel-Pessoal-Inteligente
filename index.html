@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Pessoal</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/play.css">
+    <link rel="stylesheet" href="css/notas.css">
+    <link rel="stylesheet" href="css/desenho.css">
+    <link rel="stylesheet" href="css/tarefa.css">
+    <link rel="stylesheet" href="css/motivacao.css">
+    <link rel="stylesheet" href="css/hora.css">
+    <link rel="stylesheet" href="css/tempo.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
@@ -20,118 +27,132 @@
         </blockquote>
     </div>
     <!-- ------ -->
-    <div id="hora" class="hora">
-        <div class="container">
-            <div class="glass-card relogio-principal">
-                <div class="hora-display">
-                    <div id="hora-atual" class="hora">00:00:00</div>
-                </div>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <div class="info-label">Data</div>
-                        <div id="data" class="info-value">Carregando...</div>
+
+    <div class="primeiro">
+        <div id="hora" class="hora">
+            <div class="container">
+                <div class="glass-card relogio-principal">
+                    <div class="hora-display">
+                        <div id="hora-atual" class="hora">00:00:00</div>
                     </div>
-                    <div class="info-card">
-                        <div class="info-label">Fuso Horário</div>
-                        <div id="fuso" class="info-value">...</div>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-label">Dia do Ano</div>
-                        <div id="dia-ano" class="info-value">0</div>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <div class="info-label">Data</div>
+                            <div id="data" class="info-value">Carregando...</div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-label">Fuso Horário</div>
+                            <div id="fuso" class="info-value">...</div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-label">Dia do Ano</div>
+                            <div id="dia-ano" class="info-value">0</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- ------ -->
+
+
+        <div id="tempo" class="tempo">
+            <div class="container">
+                <div class="glass-card tempo-principal">
+                    <h2>Tempo Atual</h2>
+                    <div class="weather-info">
+                        <div class="location" id="location">Carregando...</div>
+                        <div class="temperature" id="temperature">--°C</div>
+                        <div class="condition" id="condition">Carregando...</div>
+                    </div>
+                    <button id="refreshWeather" class="refresh-btn">Atualizar</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- ------ -->
-
-    <div id="tempo" class="tempo">Tempo</div>
-
-
 
 
     <div id="lista" class="lista">
-         <div class="container">
-        <div class="header">
-            <h1>Lista de Tarefas</h1>
-            <p>Organize suas atividades e seja mais produtivo!</p>
-        </div>
+        <div class="container">
+            <div class="header">
+                <h1>Lista de Tarefas</h1>
+                <p>Organize suas atividades e seja mais produtivo!</p>
+            </div>
 
-        <div class="input-container">
-            <input type="text" class="task-input" placeholder="Digite uma nova tarefa..." id="taskInput">
-            <button class="add-btn" id="addBtn" onclick="">Adicionar</button>
-        </div>
+            <div class="input-container">
+                <input type="text" class="task-input" placeholder="Digite uma nova tarefa..." id="taskInput">
+                <button class="add-btn" id="addBtn" onclick="">Adicionar</button>
+            </div>
 
-        <div class="filter-container">
-            <button class="filter-btn active" data-filter="all">Todas</button>
-            <button class="filter-btn" data-filter="pending">Pendentes</button>
-            <button class="filter-btn" data-filter="completed">Concluídas</button>
-        </div>
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="pending">Pendentes</button>
+                <button class="filter-btn" data-filter="completed">Concluídas</button>
+            </div>
 
-        <div class="tasks-container" id="tasksContainer">
-            <div class="empty-state" id="emptyState">
-                <h3>Nenhuma tarefa ainda</h3>
-                <p>Adicione sua primeira tarefa para começar!</p>
+            <div class="tasks-container" id="tasksContainer">
+                <div class="empty-state" id="emptyState">
+                    <h3>Nenhuma tarefa ainda</h3>
+                    <p>Adicione sua primeira tarefa para começar!</p>
+                </div>
+            </div>
+
+            <div class="stats" id="stats" style="display: none;">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalTasks">0</div>
+                    <div class="stat-label">Total</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="pendingTasks">0</div>
+                    <div class="stat-label">Pendentes</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="completedTasks">0</div>
+                    <div class="stat-label">Concluídas</div>
+                </div>
             </div>
         </div>
-
-        <div class="stats" id="stats" style="display: none;">
-            <div class="stat-item">
-                <div class="stat-number" id="totalTasks">0</div>
-                <div class="stat-label">Total</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" id="pendingTasks">0</div>
-                <div class="stat-label">Pendentes</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" id="completedTasks">0</div>
-                <div class="stat-label">Concluídas</div>
-            </div>
-        </div>
-    </div>
     </div>
 
     <div id="mapa" class="mapa">Mapa</div>
 
-<div id="notas" class="notas">Bloco de Notas>
-  <div class="container">
-    <header class="header">
-      <h1>Bloco de Notas</h1>
-      <p>Digite e salve suas anotações rapidamente no navegador.</p>
-    </header>
+    <div id="notas" class="notas">
+        <div class="container">
+            <header class="header">
+                <h1>Bloco de Notas</h1>
+                <p>Digite e salve suas anotações rapidamente no navegador.</p>
+            </header>
 
-    <section class="notas-container" aria-label="Bloco de Notas Rápido">
-      <textarea id="notas" placeholder="Digite suas anotações aqui..."></textarea>
-      <div class="info-sub">As anotações são salvas automaticamente no seu navegador.</div>
-    </section>
+            <section class="notas-container" aria-label="Bloco de Notas Rápido">
+                <textarea id="notas1" placeholder="Digite suas anotações aqui..."></textarea>
+                <div class="info-sub">As anotações são salvas automaticamente no seu navegador.</div>
+            </section>
 
-    <div class="stats" id="stats" style="display: none;">
-      <div class="stat-item">
-        <div class="stat-number" id="charCount">0</div>
-        <div class="stat-label">Caracteres</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number" id="wordCount">0</div>
-        <div class="stat-label">Palavras</div>
-      </div>
+            <div class="stats" id="stats" style="display: none;">
+                <div class="stat-item">
+                    <div class="stat-number" id="charCount">0</div>
+                    <div class="stat-label">Caracteres</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="wordCount">0</div>
+                    <div class="stat-label">Palavras</div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
 
-<div id="desenho" class="desenho">
-  <div class="container">
-    <div class="glass-card">
-      <h2>Quadro de Desenho</h2>
-      <div class="controls">
-        <button id="toggle-eraser">Usar Borracha</button>
-      </div>
-      <canvas id="canvas" width="700" height="400"></canvas>
+    <div id="desenho" class="desenho">
+        <div class="container">
+            <div class="glass-card">
+                <h2>Quadro de Desenho</h2>
+                <div class="controls">
+                    <button id="toggle-eraser">Usar Borracha</button>
+                </div>
+                <canvas id="canvas" width="700" height="400"></canvas>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-    
+
 
 
 
@@ -200,8 +221,6 @@
     <script src="js/Tempo.js"></script>
 
     <script src="js/music-list.js"></script>
-
-   
 
 
 </body>
