@@ -1,0 +1,24 @@
+{
+  "name": "meu-painel-pessoal-inteligente",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GiovanaQMaciel/Meu-Painel-Pessoal-Inteligente.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GiovanaQMaciel/Meu-Painel-Pessoal-Inteligente/issues"
+  },
+  "homepage": "https://github.com/GiovanaQMaciel/Meu-Painel-Pessoal-Inteligente#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
