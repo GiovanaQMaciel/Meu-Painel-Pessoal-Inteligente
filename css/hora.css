@@ -3,17 +3,23 @@
     background: #eaf3ff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   } */
-  
+   .containerh {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 30px;
+    border-radius: 30px;
+  }
+
   #hora {
     display: flex;
     align-items: center;
     justify-content: flex-start; /* garante que fique à esquerda */
-    height: 100vh;
+    min-width: 51%;
     padding-left: 40px;
   }
   
   .glass-card.relogio-principal {
-    background: rgba(255, 255, 255, 0.15);
+    /* background: rgba(255, 255, 255, 0.15); */
     border-radius: 16px;
     padding: 20px 30px;
     width: 500px; /* MAIS LARGO */

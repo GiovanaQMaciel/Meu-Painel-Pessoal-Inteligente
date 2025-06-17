@@ -38,7 +38,7 @@ const formBusca = document.getElementById('formBusca');
         livroDiv.innerHTML = `
           ${thumbnail ? `<img src="${thumbnail}" alt="Capa de ${titulo}" style="float:left; margin-right:10px; max-height:100px;">` : ''}
           <div>
-            <div class="titulo">${titulo}</div>
+            <div class="titulok">${titulo}</div>
             <div class="autor">Por: ${autores}</div>
           </div>
           <div style="clear:both;"></div>

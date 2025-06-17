@@ -2,7 +2,7 @@ body {
     background-color: #2D5674;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 10px;
+    
 }
 
 .titulo {
@@ -13,11 +13,27 @@ body {
 
 .primeiro{
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
-    height: 100vh;
+    margin: 5%;
+
 }
 
+.segundo{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin: 5%;
+
+}
+
+.terceiro{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin: 5%;
+
+}
 
 .container {
     max-width: 600px;
@@ -258,3 +274,9 @@ body {
 
 /* ------------------- hora  */
 
+.ultima{
+    display:flex;
+    margin: 1%;
+    justify-content: center;
+    margin-bottom: 10%;
+}

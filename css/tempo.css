@@ -1,6 +1,78 @@
-.tempo{
-    height: 50px;
+.tempos{
+    
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 51%;
+}
+
+.containert {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 30px;
+    border-radius: 30px;
+    min-width: 45%;
+  }
+
+.tempo-principal {
+    background-color: antiquewhite;
+    border-radius: 16px;
+    padding: 20px 30px;
+    width: 500px; /* MAIS LARGO */
+    height: 180px; /* MAIS BAIXO */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .refresh-btn {
+            padding: 7px 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+
+.tempo-label {
+    font-size: 30px;
+    font-weight: bold;
+    color: #733d97;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.location {
+    font-size: 14px;
+    color: #9a9a9a;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.weather{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
+    
+}
+
+.temperature {
+    
+    font-weight: bold;
+    color: #a264e4;
+    text-align: center;
+}
+
+.condition {
+    
+    color: #a264e4;
+    text-align: center;
 }

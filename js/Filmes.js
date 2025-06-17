@@ -18,7 +18,7 @@ const apiKey = 'aab7ab59c3d913baeda61289be793949';
               onerror="this.src='https://via.placeholder.com/300x450?text=Sem+Imagem';"
             />
             <div class="info">
-              <h2 class="titulo">${filme.title}</h2>
+              <h3 class="tituloc">${filme.title}</h3>
               <div class="lancamento">${filme.release_date || 'Data indisponível'}</div>
               <p class="sinopse">${filme.overview || 'Sem sinopse disponível'}</p>
             </div>

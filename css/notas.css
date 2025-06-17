@@ -16,26 +16,34 @@
   box-sizing: border-box;
 }
 
+.containerb {
+            min-width: 51%;
+            min-height: 600px; 
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            
+        }
+
 .notas {
   font-family: "Orbitron", sans-serif;
   background: var(--bg);
   color: var(--texto);
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease;
   overflow-x: hidden;
   padding: 20px;
+  border-radius: 10px;
+ 
+  
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  max-width: 800px;
-  width: 100%;
-}
+
 
 .glass-card {
   background: var(--glass-bg);
@@ -70,7 +78,7 @@ h2 {
   letter-spacing: 1.5px;
 }
 
-textarea {
+#notas1 {
   flex: 1;
   resize: none;
   border: 1px solid var(--border);
@@ -83,6 +91,7 @@ textarea {
   box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
   outline: none;
   transition: border-color 0.3s ease;
+  
 }
 
 textarea:focus {
@@ -111,3 +120,4 @@ textarea:focus {
   display: flex;
   flex-direction: column;
 }
+

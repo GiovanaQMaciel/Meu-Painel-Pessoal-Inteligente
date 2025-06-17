@@ -1,9 +1,17 @@
  .filmes {
+      display: grid;
       font-family: Arial, sans-serif;
       background: #121212;
       color: #eee;
       margin: 0;
       padding: 20px;
+      width: 47%;
+       border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow-y: scroll;
+      height: 70vh;
+     
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
     h1 {
       text-align: center;
@@ -11,11 +19,13 @@
     }
     .filmes-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
-      max-width: 1000px;
+      max-width: 500px;
       margin: 0 auto;
+
     }
+    
     .filme {
       background: #1e1e1e;
       border-radius: 8px;
@@ -23,20 +33,23 @@
       box-shadow: 0 2px 8px rgba(255,255,255,0.1);
       transition: transform 0.2s ease;
       cursor: pointer;
+      margin: 30px;
+      height: 600px;
+      align-items: center;
+      justify-content: center;
     }
     .filme:hover {
       transform: scale(1.05);
     }
     .poster {
-      width: 100%;
+     margin-left: 17%;
       height: 270px;
       object-fit: cover;
-      display: block;
-    }
+          }
     .info {
       padding: 10px;
     }
-    .titulo {
+    .tituloc {
       font-size: 18px;
       margin: 0 0 8px 0;
       font-weight: bold;
@@ -46,10 +59,9 @@
       color: #bbb;
       margin-bottom: 10px;
     }
-    .sinopse {
-      font-size: 14px;
-      color: #ddd;
-      height: 70px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+   .sinopse {
+  font-size: 14px;
+  color: #ddd;
+  overflow: visible;
+  text-align: justify;
+}
